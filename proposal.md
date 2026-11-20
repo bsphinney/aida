@@ -16,6 +16,7 @@ AIDA is a hands-on group where Genome Center researchers share practical ways to
 
 - Ziyue Yang, Fiehn Lab
 - Uri Keshet, Metabolomics Core
+- Adam Schaal
 - [Name, lab or core]
 - [Name, lab or core]
 
