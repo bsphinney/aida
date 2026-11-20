@@ -12,18 +12,14 @@ This is not a code project. It holds a proposal to the UC Davis Genome Center fo
 - **Topic:** a technical, hands-on group sharing practical tips for using AI coding agents to speed up scientific research at the UC Davis Genome Center. It covers omics data analysis and lab automation.
 - **Central idea (the user's):** the group is about the practical side of using AI agents to speed up research at the Genome Center. Every show-and-tell gets written up in a shared GitHub repository, in a form people can point their own AI agents at. Labs can then reuse each other's workflows and share ideas, rather than each lab starting from scratch. Build the Objectives, Activities and Impact sections around this repository.
 - **Keep it informal (the user's choice).** Any topic is welcome, including simply which tools, editors or models someone uses. Every session is recorded and transcribed, and an AI agent turns the transcript into a write-up for the repository, so presenters have no extra work. Presenters can optionally add more: an installable agent skill, a note of how much time the workflow saved, and how they checked the results. Describe these extras as encouraged, never required. Presenters review the write-up before it is posted, and nothing confidential or unpublished goes in.
-- **Draft:** `proposal.md` is the working copy, in the public GitHub repository https://github.com/bsphinney/aida. Several colleagues edit it, each with their own AI agent. The earlier Claude Doc (https://claude.ai/artifact/JJnkJNjrbip4ZVLcDwA89N) is out of date, so don't edit it. When the proposal is ready, convert `proposal.md` to PDF and check that it is at most 2 pages.
+- **Status (2026-11-20): final.** `proposal.md` is the submitted text and `AIDA_proposal.pdf` is the PDF built from it (2 pages, letter, 11 pt). After any edit, rebuild with `python3 -I scripts/make_pdf.py proposal.md AIDA_proposal.pdf` (needs Google Chrome plus the Python `markdown` and `pypdf` packages) and confirm it still says 2 pages; the second page is nearly full, so any addition needs a matching cut. The Anaconda `pandoc` on this Mac is an Intel-only build and does not run. The old Claude Doc (https://claude.ai/artifact/JJnkJNjrbip4ZVLcDwA89N) is out of date; don't edit it.
 - **The repository is public.** Never commit the call PDF (it's in `.gitignore`), unpublished data, or a participant's name unless that person has agreed to be listed.
 - **Email subject line:** `Genome Center Focus Group Proposal – AIDA`
 - **Type:** a new group. Leave out section 6 (Past Activities).
 - **Leader:** Brett Phinney (Academic Federation), which meets the leader requirement.
-- **Participants:** membership is open to anyone at the Genome Center who wants practical tips on using AI in their research. The call asks for a list of participants, so add named people as the user supplies them.
-
-- **Budget agreed with the user so far ($8,500 of the $10k cap):**
-  - Monthly "AI show-and-tell" sessions with lunch (~10 a year): $2,000
-  - Two half-day hands-on workshops: $1,500
-  - GPU hardware for running local AI models: $5,000
-  - Still open: whether to spend the remaining $1,500 on an "AI sprint day", and where the GPUs will be installed
+- **Participants listed** (each added themselves by pull request, which counts as consent): Uri Keshet (Metabolomics Core), Adam Schaal (Genome Center), Gert Wohlgemuth (West Coast Metabolomics Center), Ziyue Yang (Fiehn Lab). Keep them in alphabetical order by surname.
+- **Objective 3 (shared tools, data and computing)** is a condensed version of Gert Wohlgemuth's pull request #1. His full catalog of shared tools lives in `catalog/`; follow `catalog/README.md` when adding entries.
+- **Budget (final, $8,500 of the $10k cap):** monthly show-and-tells $2,000; two half-day workshops $1,500; GPUs for local models $5,000, described as "hosted at the Genome Center" (the user chose not to name a machine). The user decided against the $1,500 sprint day.
 
 ## Proposal requirements (from the 2026 call)
 

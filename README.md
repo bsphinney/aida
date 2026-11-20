@@ -2,9 +2,9 @@
 
 A proposed UC Davis Genome Center Focus Group on practical ways to use AI coding agents to speed up omics data analysis and lab automation.
 
-This repository currently holds the **draft proposal**: [`proposal.md`](proposal.md). If the group is funded, the repository will become its shared library of session write-ups and reusable agent workflows.
+This repository holds the **final proposal**: [`proposal.md`](proposal.md), and the 2-page PDF made from it, [`AIDA_proposal.pdf`](AIDA_proposal.pdf). It also holds [`catalog/`](catalog/), a list of AI tools that Genome Center labs share. If the group is funded, the repository becomes its shared library of session write-ups and reusable agent workflows.
 
-## How to help edit the proposal
+## How to suggest changes
 
 Anyone with access can edit. Use whichever way suits you:
 
