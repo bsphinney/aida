@@ -31,7 +31,7 @@ th, td {{ border: 1px solid #999; padding: 2px 10px; text-align: left; }}
 td:last-child, th:last-child {{ text-align: right; }}
 a {{ color: #1a4fa0; text-decoration: none; }}
 """
-html = f"<!doctype html><html><head><meta charset='utf-8'><style>{css}</style></head><body>{body}</body></html>"
+html = f"<!doctype html><html><head><meta charset='utf-8'><title>AIDA: Genome Center Focus Group Proposal</title><style>{css}</style></head><body>{body}</body></html>"
 
 with tempfile.TemporaryDirectory(dir=out.parent) as tmp:
     page = pathlib.Path(tmp) / "proposal.html"
