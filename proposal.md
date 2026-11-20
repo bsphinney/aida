@@ -14,7 +14,7 @@ AIDA is a hands-on group where Genome Center researchers share practical ways to
 
 **Participants:** membership is open to anyone at the Genome Center who wants practical tips on using AI in their research, including faculty, staff scientists, core staff, postdocs and graduate students. People who have already agreed to take part:
 
-- [Name, lab or core]
+- Adam Schaal
 - [Name, lab or core]
 - [Name, lab or core]
 
