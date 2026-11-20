@@ -6,7 +6,7 @@ Genome Center Focus Group Proposal (new group) · Brett Phinney · Draft, Novemb
 
 **AIDA: AI for Data Analysis and Automation in Genomics Research**
 
-AIDA is a hands-on group where Genome Center researchers share practical ways to use AI coding agents to speed up omics data analysis and lab automation. Every session feeds a shared library that any lab's AI agent can read and reuse.
+AIDA is a hands-on group where Genome Center researchers build and share practical AI tools and helpers for omics data analysis and lab automation. Every session feeds a shared library of workflows and tools that any lab's AI agent can read and reuse.
 
 ## 2. Leader and Interested Participants
 
@@ -17,6 +17,7 @@ AIDA is a hands-on group where Genome Center researchers share practical ways to
 - Ziyue Yang, Fiehn Lab
 - Uri Keshet, Metabolomics Core
 - Adam Schaal
+- Gert Wohlgemuth, West Coast Metabolomics Center
 - [Name, lab or core]
 - [Name, lab or core]
 
@@ -30,7 +31,10 @@ Objectives:
 
 1. **Share practical experience.** Researchers show what works in their own research and what doesn't: tools, editors and models, prompts, analysis pipelines, lab automation, and running jobs on the HPC@UCD clusters.
 2. **Build a shared, agent-readable library.** Every session is written up in a public GitHub repository, organized so a researcher can point their own AI agent at it and reuse a workflow developed in another lab.
-3. **Use AI responsibly.** The group promotes checking AI-generated results, keeping analyses reproducible, and protecting unpublished and sensitive data, which local models make possible.
+3. **Share AI computing across labs.** Labs pool their GPU servers and cards into a mesh of shared, OpenAI-compatible model servers. Each lab runs its own gateway in front of its hardware and connects it to the others, so any agent or script reaches every lab's local models through one standard interface while each lab keeps control of its own hardware and data. Owners get first priority on their own GPUs and spare capacity is shared fairly. The mesh follows the open InferWeave specifications ([github.com/InferWeave/inferweave-specs](https://github.com/InferWeave/inferweave-specs)).
+4. **Share data and services through MCP.** Labs and cores expose their databases, instruments and pipelines as MCP servers (the Model Context Protocol, an open standard any AI agent can use) and list them in a shared catalog. One lab's agent can then search another core's spectral library or check a sequencing run, with access controlled by the lab that owns it.
+5. **Make AI workflows repeatable.** The group builds and shares tools that turn a one-off AI session into a deterministic workflow: written specifications, scripted steps, pinned models and versions, and automatic checks, so the same input gives the same, verified result next month and in another lab.
+6. **Use AI responsibly.** The group promotes checking AI-generated results, keeping analyses reproducible, and protecting unpublished and sensitive data, which local models make possible.
 
 **Scope:** practical use of AI agents across genomics, transcriptomics, proteomics, metabolomics and lab operations. The emphasis is on what members can apply in their own work the next day, not on AI theory. This supports the Genome Center's mission of advancing genomics research through collaboration and shared resources.
 
@@ -41,7 +45,7 @@ The group is deliberately informal, so anyone can contribute without much prepar
 - **Presenters** give a short show-and-tell on anything useful. It can be as simple as which editor or model they use and why, or a full analysis pipeline built with an agent. Any level of experience is welcome.
 - **Every session is recorded and transcribed.** An AI agent turns the transcript into a written entry for the repository, so presenters don't have to write anything up. Presenters approve the entry before it is posted, and no confidential or unpublished data is included.
 - **Optional extras.** Presenters are encouraged, but never required, to add a reusable agent skill (instructions an agent can load and follow), an estimate of the time the workflow saved, and a note on how they checked the results.
-- **Cores and trainees.** Genome Center cores can show how their services and data work with AI agents. Graduate students and postdocs gain a career skill and a low-stakes place to present.
+- **Cores and trainees.** Genome Center cores can publish MCP servers for their services and data, starting from a shared template that is read-only by default and tested against real data. Graduate students and postdocs gain a career skill and a low-stakes place to present.
 - **The leader** organizes the sessions and workshops, looks after the repository and runs the shared GPU hardware.
 
 ## 5. Proposed Activities and Budget
@@ -49,8 +53,8 @@ The group is deliberately informal, so anyone can contribute without much prepar
 AIDA requests $8,500 for its first year, for three activities:
 
 - **Monthly AI show-and-tells.** About 10 lunchtime sessions of one or two short demos each, followed by discussion. Each one becomes a write-up in the shared GitHub repository.
-- **Two half-day hands-on workshops.** The first covers setting up an AI coding agent for data analysis. The second covers using agents for lab automation and running jobs on the HPC@UCD clusters. Both teach people how to use the shared library and add to it.
-- **GPUs for running AI models locally.** This lets labs use AI on data that cannot be sent to commercial AI services, such as unpublished results, human samples and data under controlled access. Members will also compare local and cloud models on the library's own workflows and post the results. The GPUs will be installed in [existing Proteomics Core server / HIVE node: to be confirmed].
+- **Two half-day hands-on workshops.** The first covers setting up an AI coding agent for data analysis and building an MCP server for a lab's own data. The second covers using agents for lab automation and running jobs on the HPC@UCD clusters. Both teach people how to use the shared library and add to it.
+- **GPUs for running AI models locally.** This lets labs use AI on data that cannot be sent to commercial AI services, such as unpublished results, human samples and data under controlled access. The GPUs join the shared model-server mesh (objective 3), so every participating lab can use them. Members will also compare local and cloud models on the library's own workflows and post the results. The GPUs will be installed in [existing Proteomics Core server / HIVE node: to be confirmed].
 
 | Activity | Cost |
 | --- | --- |
@@ -65,6 +69,6 @@ The group also runs two activities at no cost: the GitHub repository itself, and
 
 ## 6. Potential Impact
 
-- **Research:** labs can reuse each other's AI workflows instead of each one starting from scratch, which shortens the time from data to result. Presenters who note the time a workflow saved build a measured record of the group's effect, which will support a renewal.
+- **Research:** labs can reuse each other's AI workflows and tools instead of each one starting from scratch, their agents can work across the Genome Center's data through the MCP catalog, and pooled GPUs give every lab access to local models, which shortens the time from data to result. Presenters who note the time a workflow saved build a measured record of the group's effect, which will support a renewal.
 - **Education:** the workshops and sessions teach researchers at every level a skill that is quickly becoming essential, along with good habits for checking results and keeping analyses reproducible. Graduate students and postdocs in particular get hands-on training and a place to present.
 - **Outreach:** the library outlasts any single meeting and is useful to labs that never attend. Because the repository is public, other genomics groups can use it too, which raises the Genome Center's profile as a leader in practical, responsible use of AI for research. This proposal was itself drafted in that repository, with AI agents and colleagues editing it together.
